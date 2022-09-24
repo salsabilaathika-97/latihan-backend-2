@@ -20,4 +20,11 @@ router.post('/', (req, res) => {
     res.send("Berhasil")
 })
 
+router.get('/:id', (req, res) => {
+    console.log(req.params);
+    const id = req.params
+    const user = userData.find(item => item.id = id)
+    res.send(user)
+})
+
 module.exports = router;
