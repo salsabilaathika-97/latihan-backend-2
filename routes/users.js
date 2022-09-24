@@ -26,4 +26,10 @@ router.get('/:id', (req, res) => {
     res.send(user)
 })
 
+router.get('/:name', (req, res) => {
+    const dataParam = req.params;
+    const user = userData.find(item => item.name = dataParam.name)
+    res.send(user)
+})
+
 module.exports = router;
