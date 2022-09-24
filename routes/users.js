@@ -1,5 +1,5 @@
 const express = require("express")
-
+const { v4: uuidv4 } = require('uuid');
 const router = express.Router()
 
 const userData = [
@@ -16,9 +16,8 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     const data = req.body;
-    console.log(data);
+    userData.push({id: uuidv4(), ...data})
     res.send("Berhasil")
-    userData.push(data)
 })
 
 module.exports = router;
