@@ -19,9 +19,6 @@ router.post('/', (req, res) => {
     console.log(data);
     res.send("Berhasil")
     userData.push(data)
-    if (userData.length > 1) {
-        res.send("Data berhasil ditambahkan")
-    }
 })
 
 module.exports = router;
