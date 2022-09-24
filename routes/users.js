@@ -21,9 +21,8 @@ router.post('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    console.log(req.params);
-    const id = req.params
-    const user = userData.find(item => item.id = id)
+    const dataParam = req.params;
+    const user = userData.find(item => item.id = dataParam.id)
     res.send(user)
 })
 
